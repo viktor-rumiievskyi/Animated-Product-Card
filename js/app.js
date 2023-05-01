@@ -20,9 +20,11 @@ function changeColor() {
 	let shoe = document.querySelector(`.shoe[color="${color}"]`);
 	let gradient = document.querySelector(`.gradient[color="${color}"]`);
 	let prevGradient = document.querySelector(`.gradient[color="${prevColor}"]`);
+	
 
 	colors.forEach(c => c.classList.remove('active'));
 	this.classList.add('active');
+
 
 	document.documentElement.style.setProperty('--primary', primary);
 
@@ -40,6 +42,8 @@ function changeColor() {
 		animationEnd = true;
 	})
 }
+
+
 
 sizes.forEach(size => size.addEventListener('click', changeSize));
 colors.forEach(c => c.addEventListener('click', changeColor));
